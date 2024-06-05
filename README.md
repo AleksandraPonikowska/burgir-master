@@ -22,8 +22,6 @@ The objective of Word Chef is to score as many points as possible before the tim
 - **Keyboard**: Type the word directly and press Enter to submit.
 
 ## License
-
-## License
 This project is licensed under the GNU General Public License v2.0. See the LICENSE file for details.
 
 
