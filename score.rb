@@ -17,7 +17,6 @@ class Score < MySprite
     @object = MySprite.new("score.png",0,0)
     @text.remove
     @text = Text.new("twój wynik: "+ @value.to_s, x: 200, y: 260, size: 50,color: 'black')
-    @showing_score = true
   end
 
 end
