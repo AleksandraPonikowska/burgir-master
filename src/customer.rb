@@ -1,7 +1,7 @@
 require_relative 'timer'
 
 class Customer < MySprite
-  attr_accessor :syllabe, :active, :movement, :timer
+  attr_accessor :active, :timer
 
   def initialize(image_path, x, y)
     super(image_path, x, y)
