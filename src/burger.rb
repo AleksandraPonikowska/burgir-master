@@ -2,22 +2,14 @@ require 'ruby2d'
 require_relative 'mysprite'
 
 class Burger < MySprite
-  attr_accessor :word
 
   def initialize(path, x, y)
-    #super(path, x, y)  # Call the parent class's initialize method if necessary
     @x = x
     @y = y
     @word = ""
     @ingredients = []
-    @ingredients << MySprite.new("burger/bula1.png", @x, @y)
+    bottom_bun
     top_bun
-
-
-  end
-
-  def top_bun
-    @ingredients << MySprite.new("burger/bula2.png", @x, @y - (word.length) * 20)
   end
 
   def set_word(word)
@@ -25,27 +17,35 @@ class Burger < MySprite
     update
   end 
 
+  private
+
   def update
 
-    # Usuń wszystkie elementy, jeśli długość `@ingredients` jest inna niż oczekiwana
-    expected_length = 2 + @word.length # 2 stałe obrazy + liczba liter w słowie
-
-    if @word.length == 0 && @ingredients.length != 2
+    expected_length = 2 + @word.length 
+    
+    if  expected_length == 2
       while @ingredients.length > 1
         @ingredients.pop.remove
       end
       top_bun
-
-    end
-
-    if @ingredients.length < expected_length
+    elsif @ingredients.length < expected_length
       @ingredients.pop.remove 
-      @ingredients << MySprite.new("burger/#{word[-1]}.png", @x, @y - (word.length-1) * 20)
+      add_ingredient("#{@word[-1]}.png", @word.length-1 )
       top_bun
     end
-  
 
   end
   
+  def bottom_bun
+    add_ingredient("bula1.png", 0)
+  end
+
+  def top_bun
+    add_ingredient("bula2.png", @word.length)
+  end
+
+  def add_ingredient(image_path, n)
+    @ingredients << MySprite.new("burger/#{image_path}", @x, @y - n * 20)
+  end
 
 end
