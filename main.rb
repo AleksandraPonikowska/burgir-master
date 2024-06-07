@@ -1,6 +1,5 @@
 # main.rb
 require 'ruby2d'
-require_relative 'sprite'
 require_relative 'score'
 require_relative 'dictionary'
 require_relative 'textbox'
