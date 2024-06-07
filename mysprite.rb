@@ -3,6 +3,7 @@ class MySprite
     attr_reader :x, :y
   
     def initialize(image_path, x, y)
+      @id = "tba"
       @x = x
       @y = y
       @object = Sprite.new("assets/" + image_path, x: @x, y: @y)
