@@ -1,13 +1,13 @@
 # main.rb
 
 require 'ruby2d'
-require_relative 'score'
-require_relative 'dictionary'
-require_relative 'textbox'
-require_relative 'burger'
-require_relative 'customer'
-require_relative 'timer'
-require_relative 'game_manager'
+require_relative 'src/score'
+require_relative 'src/dictionary'
+require_relative 'src/textbox'
+require_relative 'src/burger'
+require_relative 'src/customer'
+require_relative 'src/timer'
+require_relative 'src/game_manager'
 
 set title: "burgir master", width: 900, height: 600, resizable: false
 
