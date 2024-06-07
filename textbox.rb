@@ -60,13 +60,7 @@ class TextBox < MySprite
     update_text
   end
 
-  def text
-    @text
-  end
 
-  def blit
-    @text_object.add
-  end
 
   def set_pos(x, y)
     super
