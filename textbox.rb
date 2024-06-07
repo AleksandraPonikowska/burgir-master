@@ -4,7 +4,7 @@ require_relative 'mysprite'
 
 
 class TextBox < MySprite
-  attr_accessor :is_active
+  attr_accessor :text, :is_active
 
   def initialize(image_path, x, y)
     @x = x
