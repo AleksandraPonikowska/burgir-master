@@ -11,6 +11,7 @@ class Customer < MySprite
     @movement = 0
     @delay = 0
     @timer = nil
+    @time = 0
   end
 
   def reset(dict)
