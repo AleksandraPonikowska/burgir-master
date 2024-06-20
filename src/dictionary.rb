@@ -10,8 +10,12 @@ class Dictionary
 
   def random_syllable
     word = @valid_words.sample
-    syllable_index = rand(0..word.length - 3)
-    word[syllable_index, 3]
+    if word.length < 3
+      "A"
+    else
+      syllable_index = rand(0..word.length - 3)
+      word[syllable_index, 3]
+    end
   end
   
 end
