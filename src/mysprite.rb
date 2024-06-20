@@ -11,6 +11,10 @@ class MySprite
       @object.remove
     end
 
+    def update
+      
+    end
+
     def set_pos(x,y)
         @x = x
         @y = y
