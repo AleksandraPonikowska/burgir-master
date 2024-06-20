@@ -1,7 +1,6 @@
 require 'ruby2d'
 
 class Timer
-  attr_reader :x, :y, :w, :h, :duration
 
   def initialize(x, y, w, h, duration)
     @x = x
