@@ -1,7 +1,6 @@
 require_relative 'mysprite'
 
 class Score < MySprite
-  attr_reader :value
 
   def initialize(image_path, x, y)
     @value = 0
